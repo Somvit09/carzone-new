@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['sam-carzone.herokuapp.com', '127.0.0.1', 'localhost', ]
 
@@ -208,4 +208,5 @@ SOCIAL_AUTH_FACEBOOK_KEY = '615637653058056'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'ab3ba23b96922aa137df1841243c2c09'
 
 # whitenoise settings
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
