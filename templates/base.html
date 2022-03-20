@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>my first car website {% block title %}   {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-submenu.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/linearicons/style.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/jquery.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/dropzone.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/lightbox.min.css' %}">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/jnoty.css' %}">
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" id="style_sheet" href="{% static 'css/skins/red.css' %}">
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" >
+
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPlayfair+Display:400,700%7CRoboto:100,300,400,400i,500,700">
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ie10-viewport-bug-workaround.css' %}">
+
+    <script  src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="css/ie10-viewport-bug-workaround.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script  src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script  src="js/html5shiv.min.js"></script>
+    <script  src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script  src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script  src="js/ie-emulation-modes-warning.js"></script>
+
+
+</head>
+</head>
+<body>
+<div class="page_loader"></div>
+
+<!-- Top header start -->
+{% include 'includes/header.html' %}
+<!-- Top header end -->
+
+<!-- Main header start -->
+{% include 'includes/navbar.html' %}
+<!-- main header ends -->
+
+
+<!-- body start  -->
+ {% block content %}
+
+
+ {% endblock %}
+<!-- endbody -->
+
+ <!-- Footer start -->
+ {% include 'includes/footer.html' %}
+ <!-- Footer end -->
+
+<!-- end body -->
+
+<!-- Full Page Search -->
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="{% url 'search' %}" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here" name="keyword"/>
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
+
+<script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script  src="{% static 'js/bootstrap-submenu.js' %}"></script>
+<script  src="{% static 'js/rangeslider.js' %}"></script>
+<script  src="{% static 'js/jquery.mb.YTPlayer.js' %}"></script>
+<script  src="{% static 'js/bootstrap-select.min.js' %}"></script>
+<script  src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script  src="{% static 'js/jquery.scrollUp.js' %}"></script>
+<script  src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script  src="{% static 'js/dropzone.js' %}"></script>
+<script  src="{% static 'js/slick.min.js' %}"></script>
+<script  src="{% static 'js/jquery.filterizr.js' %}"></script>
+<script  src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script  src="{% static 'js/jquery.countdown.js' %}"></script>
+<script  src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+<script  src="{% static 'js/lightgallery-all.js' %}"></script>
+<script  src="{% static 'js/jnoty.js' %}"></script>
+<script  src="{% static 'js/app.js' %}"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script  src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+
+<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0N5pbJN10Y1oYFRd0MJ_v2g8W2QT74JE"></script>
+<script>
+    function LoadMap(propertes) {
+        var defaultLat = 40.7110411;
+        var defaultLng = -74.0110326;
+        var mapOptions = {
+            center: new google.maps.LatLng(defaultLat, defaultLng),
+            zoom: 15,
+            scrollwheel: false,
+            styles: [
+                {
+                    featureType: "administrative",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: "water",
+                    elementType: "labels",
+                    stylers: [
+                        {visibility: "off"}
+                    ]
+                },
+                {
+                    featureType: 'poi.business',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'labels.icon',
+                    stylers: [{visibility: 'off'}]
+                },
+            ]
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var infoWindow = new google.maps.InfoWindow();
+        var myLatlng = new google.maps.LatLng(40.7110411, -74.0110326);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map
+        });
+        (function (marker) {
+            google.maps.event.addListener(marker, "click", function (e) {
+                infoWindow.setContent("" +
+                    "<div class='map-properties contact-map-content'>" +
+                    "<div class='map-content'>" +
+                    "<p class='address'>20-21 Kathal St. Tampa City, FL</p>" +
+                    "<ul class='map-properties-list'> " +
+                    "<li><i class='flaticon-phone'></i>  +0477 8556 552</li> " +
+                    "<li><i class='flaticon-phone'></i>  info@themevessel.com</li> " +
+                    "<li><a href='index.html'><i class='fa fa-globe'></i>  http://www.example.com</li></a> " +
+                    "</ul>" +
+                    "</div>" +
+                    "</div>");
+                infoWindow.open(map, marker);
+            });
+        })(marker);
+    }
+    LoadMap();
+</script>
+
+</body>
+
+</html>

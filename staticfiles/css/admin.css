@@ -1,0 +1,12 @@
+#header{
+  background-color: #FFFFFF !important;
+  color: #FF0000 !important;
+}
+
+#header a:link, #header a:visited {
+    color: black !important;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+  background-color: #0000FF;
+}
