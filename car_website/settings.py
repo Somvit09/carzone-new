@@ -195,8 +195,8 @@ SITE_ID = 2
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.getenv('demo.mail.userforinquiry@gmail.com')
-EMAIL_HOST_PASSWORD = os.getenv('SOMvit@200032')
+EMAIL_HOST_USER = 'demo.mail.userforinquiry@gmail.com'
+EMAIL_HOST_PASSWORD = 'SOMvit@200032'
 EMAIL_USE_TLS = True
 
 # social-django urls
