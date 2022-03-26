@@ -208,5 +208,4 @@ SOCIAL_AUTH_FACEBOOK_KEY = '615637653058056'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'ab3ba23b96922aa137df1841243c2c09'
 
 # whitenoise settings
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
